@@ -1,0 +1,17 @@
+{{#dataArray.length}}
+<input type="text" id="search" class="input-medium search-query"/>
+
+<table class="table">
+  {{#dataArray}}
+  <tr>
+    <td><a href="/item/{{id}}">{{name}}</a></td>
+    <td>{{cookingTime}}</td>
+    <td>{{ingredients.basic}}</td>
+  </tr>
+  {{/dataArray}}
+</table>
+{{/dataArray.length}}
+
+{{^dataArray.length}}
+  <h2>Sorry, we currently have no recipes for you" is displayed</h2>
+{{/dataArray.length}}
