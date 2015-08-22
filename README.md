@@ -1,6 +1,6 @@
 # Node.js Express Recipe app
 
-Basic Search list and item page. 
+Basic Search list and item page.
 
 See features under `/features`. They include:
 
@@ -12,9 +12,13 @@ See features under `/features`. They include:
 Setup
 
     npm install
-  
+
+Test the application
+
+    npm test
+
 Run the application
 
     npm start
-    
+
 To view the app go to `http://localhost:3030/`

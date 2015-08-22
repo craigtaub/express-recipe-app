@@ -7,7 +7,7 @@ module.exports = function(dataArray) {
           dataArray: dataArray
         };
 
-    fs.readFile('views/list.mustache', function (err, data) {
+    fs.readFile('src/views/list.mustache', function (err, data) {
         if (err) throw err;
         var listMarkup = Mustache.render(data.toString(), listView);
 

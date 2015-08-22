@@ -7,7 +7,7 @@ module.exports = function(itemData) {
           itemData: itemData[0]
         };
 
-    fs.readFile('views/item.mustache', function (err, data) {
+    fs.readFile('src/views/item.mustache', function (err, data) {
         if (err) throw err;
         var itemMarkup = Mustache.render(data.toString(), itemView);
 
