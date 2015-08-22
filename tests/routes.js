@@ -2,7 +2,7 @@ var request = require('supertest'),
     express = require('express'),
     app = require('../src/app'),
     cheerio = require('cheerio'),
-    assert = require("assert");
+    assert = require('assert');
 
 describe('List page', function() {
     it("renders 200 status code", function(done) {
