@@ -11,8 +11,7 @@ module.exports = function(app){
 
     app.get('/item/:id', function (req, res) {
         var itemId = req.params.id,
-            items = data(),
-            itemData = items.filter(function (item) {
+            itemData = data().filter(function (item) {
                 return (item.id === itemId);
             })
 
