@@ -5,14 +5,12 @@ var request = require('supertest'),
     assert = require("assert");
 
 describe('List page', function() {
-
     it("renders 200 status code", function(done) {
         request(app)
           .get('/')
           .expect(200);
-          done();
+        done();
     });
-
     it('returns template with correct data', function(done){
         request(app)
           .get('/')
@@ -23,11 +21,18 @@ describe('List page', function() {
               done();
           });
     });
+});
 
+describe('Non-existing page', function() {
+    it("renders 404 status code", function(done) {
+        request(app)
+          .get('/something-else')
+          .expect(404);
+        done();
+    });
 });
 
 describe('Recipe Page', function() {
-
     it("returns 200 and has title, if page exists", function(done) {
         request(app)
           .get('/item/lemon-chicken')
@@ -38,7 +43,6 @@ describe('Recipe Page', function() {
               done();
           });
     });
-
     it("returns 200 and has error message, if page doesnt exist", function(done) {
         request(app)
           .get('/item/something-else')
@@ -49,5 +53,4 @@ describe('Recipe Page', function() {
               done();
           });
     });
-
 });
