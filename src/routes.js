@@ -15,8 +15,8 @@ module.exports = function(app){
                 return (item.id === itemId);
             })
 
-        itemPres(itemData).then(function(listMarkup) {
-            res.render('layout', {markup: listMarkup});
+        itemPres(itemData).then(function(itemMarkup) {
+            res.render('layout', {markup: itemMarkup});
         });
     });
 };
