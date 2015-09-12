@@ -22,3 +22,11 @@ Run the application
     npm start
 
 To view the app go to `http://localhost:3030/`
+
+Build the app in Docker container
+
+    docker build -t my/recipe-app .
+
+Expose it inside your DOCKER_HOST
+
+    docker run -p 3030:3030 -d my/recipe-app
